@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+<h1>Compose</h1>
+<form action="/update" method="post">
+    <div class="form-group">
+        <label>Title</label>
+        <input class="form-control" type="text" name="postTitle" value="<%=titleToUpdate %>">
+        <label>Post</label>
+        <textarea class="form-control" name="postBody" rows="5" cols="30" ><%= bodyToUpdate %></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit" name="button">Publish</button>
+    <input class="indexOfPost" type="hidden"  name="idx" value="<%= idx %>">
+
+</form>
+
+
+<%- include("partials/footer.ejs")  %>

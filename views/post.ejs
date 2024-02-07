@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs") %>
+<h1><%= title %></h1>
+<p><%= body %></p>
+
+
+<div class="updatedelete">
+    <a href="/update/<%= id %>">
+        
+        <button class="btn update" type="submit" name="button">Update</button>
+    </a>
+
+
+    <a href="/delete/<%= id %>">
+        <button class="btn delete" type="submit" name="button">Delete</button>
+    </a>
+</div>
+
+<%- include("partials/footer.ejs")  %>

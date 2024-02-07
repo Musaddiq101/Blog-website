@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+<h1>Home</h1>
+<p><%= homeContent %></p>
+<% if (locals.blogPosts) { %>
+    <% blogPosts.forEach(blogPost => { %>
+        <h1><%= blogPost["title"] %></h1>
+        <p><%= blogPost["body"].slice(0, 100) + "..." %><a href="/posts/<%= blogPost["title"] %>">Read More</a></p>
+    <% }); %>
+<% } %>
+
+<%- include("partials/footer.ejs")  %>
